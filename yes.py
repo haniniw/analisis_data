@@ -55,6 +55,7 @@ if not grouped_data.empty:
     ax.set_ylabel('Number of Users', fontsize=14)
     ax.set_title(f'Casual vs. Registered Users ({year_filter})', fontsize=16, fontweight='bold', pad=20)
     ax.legend()
+    ax.set_ylim(0, 500000)
     plt.tight_layout()
     st.pyplot(fig)
 
@@ -94,7 +95,7 @@ for bar, mean in zip(bars, [weekday_mean, weekend_mean]):
 ax.set_title('Perbandingan Rata-rata Jumlah Penyewaan pada Weekday dan Weekend (2011)', fontsize=14, fontweight='bold', pad=20)
 ax.set_ylabel('Rata-rata Jumlah Penyewaan', fontsize=12)
 ax.set_xlabel('Tipe Hari', fontsize=12)
-ax.set_ylim(0, 4000)
+ax.set_ylim(0, 5000)
 
 st.pyplot(fig)
 
